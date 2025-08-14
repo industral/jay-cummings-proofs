@@ -31,7 +31,7 @@ $k^2 + 2k + 1 =(k+1)^2$
 
 which is true.
 
-<ins>Conclusion.</ins> Therefore, by induction, the sum of the first $n$ odd natural numbers equals $n^2$ for all $n \in \mathbb{N}$. <p align="right">▉</p>
+<ins>Conclusion.</ins> Therefore, by induction, the sum of the first $n$ odd natural numbers equals $n^2$ for all $n \in \mathbb{N}$. ▉
 </details>
 
 ### Exercise 4.2
@@ -59,7 +59,7 @@ $$n^2 - n = (2k + 1)^2 - (2k + 1) = (2k)^2 + 4k + 1 - 2k - 1 = 4k^2 + 2k = 2(2k^
 
 Since it's divisible by 2, it's **even**.
 
-Thus, $n^2 - n$ is even for all $n \in \mathbb{N}$. <p align="right">▉</p>
+Thus, $n^2 - n$ is even for all $n \in \mathbb{N}$. ▉
 </details>
 
 
@@ -71,8 +71,11 @@ Thus, $n^2 - n$ is even for all $n \in \mathbb{N}$. <p align="right">▉</p>
 
 _**Proof.**_ Using Proposition 4.2
 
-By Proposition 4.2, $$1+2+3+...+n= \frac{n(n+1)}{2}$$
-but a hint in example is to use 
+By Proposition 4.2
+
+$$1+2+3+...+n= \frac{n(n+1)}{2}$$
+
+but a hint in the example is to use 
 $$1+2+3+...+(n-1)$$ which means
 $$1+2+3+...+(n-1) = \frac{n(n-1)}{2}$$
 
@@ -80,8 +83,40 @@ Multiplying both sides by $2$, we have
 
 $$2(1+2+3+...+(n-1)) = n(n-1)$$
 
-And since $n^2-n = n(n-1)$, $n^2 - n$ is even. <p align="right">▉</p>
+And since $n^2-n = n(n-1)$, $n^2 - n$ is even. ▉
 </details>
 
 (c) Prove it by induction
+
+<details>
+  <summary>Answer</summary>
+<br>
+
+_**Proof.**_ We proceed by induction
+
+<ins>Base case.</ins> $n=1$
+
+$1^2-1=0$ which is even
+
+<ins>Inductive Hypothesis.</ins>
+
+Assume $k^2-k$ is even for some $k \in \mathbb{N}$, that is
+
+$k^2 - k = 2m$ for some $m \in \mathbb{Z}$
+
+<ins>Induction Step.</ins>
+
+We aim to prove that the result holds for $k + 1$, that is
+$(k+1)^2 - (k+1)$ is also even.
+
+$$(k+1)^2 - (k+1) = k^2 + 2k + 1 - k - 1 = k^2 +k = (k^2 + k) - 2k$$
+
+Use inductive hypothesis $k^2 - k = 2m$, so
+
+$$(k+1)^2 - (k+1) = 2m + 2k = 2(m + k)$$
+
+which is even.
+
+<ins>Conclusion.</ins> By induction, $n^2 - n$ is even for all $n \in \mathbb{N}$. ▉
+</details>
 
