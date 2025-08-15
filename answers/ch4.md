@@ -275,7 +275,65 @@ hence, $5|(k+1)^5 - (k+1)$.
 
 <ins>Conclusion.</ins> By induction, $5|(n^5 - n)$ for all $n \in \mathbb{N}$. ▉
 
-(e) $6 | (5^2n - 1)$
+(e) $6 | (5^{2n} - 1)$
+
+_**Proof.**_ We proceed by induction.
+
+<ins>Base case.</ins> $n=1$
+
+$5^{2n} - 1 = 5^{2 \cdot 1} - 1 = 5^2 - 1 = 24$. Since $6|24$, the statement holds for $n=1$.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume $6|5^{2k} - 1$, that is, there exists $m \in \mathbb{Z}$ such that $5^{2k} - 1 = 6m$.
+
+<ins>Induction Step.</ins>
+
+We must prove that $6|5^{2(k+1)} - 1$.
+
+$$
+\begin{aligned}
+5^{2(k+1)} - 1 &= 5^{2k+2} - 1\\
+&=5^{2k} \cdot 5^2 - 1 \\
+&=5^{2k} \cdot 25 - 1 \\
+&=25 \cdot 5^{2k} - 25 +  24 \\
+&=25(5^{2k} - 1) +  24 \\
+\end{aligned}
+$$
+
+By the inductive hypothesis, $5^{2k} - 1$ is divisible by $6$, so $25(5^{2k} - 1)$ is also divisible by $6$.\
+Also, $24$ is divisible by $6$.\
+The sum of two numbers divisible by $6$ is also divisible by $6$, hence $5^{2(k+1)} - 1$ is divisible by $6$.
+
+<ins>Conclusion.</ins> By induction, $6 | (5^{2n} - 1)$ for all $n \in \mathbb{N}$. ▉
 
 (f) $5 | (6^n - 1)$
 
+_**Proof.**_ We proceed by induction.
+
+<ins>Base case.</ins> $n=1$
+
+$6^n - 1 = 6^1 - 1 = 6 - 1 = 5$. Since $5 | 5$, the statement holds for $n=1$.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume $5|(6^k - 1)$, that is, there exists $m \in \mathbb{Z}$ such that $6^k - 1 = 5m$.
+
+<ins>Induction Step.</ins>
+
+We must prove that $5|(6^{k+1} - 1)$.
+
+$$
+\begin{aligned}
+6^{k+1} - 1 &= 6^k \cdot 6 - 1\\
+&= 6(6^k) - 1 \\
+&= 6(6^k) - 6 + 5 \\
+&= 6(6^k - 1) + 5 && \text{(express in terms of $(6^k - 1)$ so we can use inductive hypothesis)} \\
+&= 6 \cdot 5m + 5 && \text{(by the inductive hypothesis)} \\
+&= 30m + 5 \\
+\end{aligned}
+$$
+
+Since both $30m$ and $5$ are divisible by $5$, $6^{k+1} - 1$ is divisible by $5$.
+
+<ins>Conclusion.</ins> By induction, $5 | (6^n - 1)$ for all $n \in \mathbb{N}$. ▉
