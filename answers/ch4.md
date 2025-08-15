@@ -238,6 +238,43 @@ Since $9 \cdot 3^{4k} + 1 \in \mathbb{Z}$, it follows that $9|3^{4(k+1)} + 9$
 
 (d) $5 | (n^5 - n)$
 
+_**Proof.**_ We proceed by induction
+
+<ins>Base case.</ins> $n=1$
+
+$$n^5 - n = 1^5 - 1 = 0$$
+
+Since $5|0$, the base case holds.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume $5|(k^5 - k)$, that is, there exists $m \in \mathbb{Z}$ such that $k^5 - k = 5m$
+
+<ins>Induction Step.</ins>
+
+We must show that $5|((k+1)^5 - (k+1))$
+
+Expand $(k+1)^5$ via Binomial Theorem:
+
+$$(k+1)^5 = k^5 + 5k^4 + 10k^3 + 10k^2 + 5k + 1$$
+
+Now
+
+$$
+\begin{aligned}
+(k+1)^5 - (k+1) &= k^5 + 5k^4 + 10k^3 + 10k^2 + 5k + 1 - (k+1) \\
+&= k^5 + 5k^4 + 10k^3 + 10k^2 + 5k + 1 - k - 1 \\
+&= (k^5 - k) + 5k^4 + 10k^3 + 10k^2 + 5k && \text{(factor $(k^5 - k)$ so we can use inductive hypothesis)}   \\ 
+&= (k^5 - k) + 5(k^4 + 2k^3 + 2k^2 + k) \\ 
+&= 5m + 5(k^4 + 2k^3 + 2k^2 + k) && \text{(use inductive hypothesis)} \\ 
+&= 5(m + k^4 + 2k^3 + 2k^2 + k) \\ 
+\end{aligned}
+$$
+
+hence, $5|(k+1)^5 - (k+1)$.
+
+<ins>Conclusion.</ins> By induction, $5|(n^5 - n)$ for all $n \in \mathbb{N}$. ▉
+
 (e) $6 | (5^2n - 1)$
 
 (f) $5 | (6^n - 1)$
