@@ -206,8 +206,35 @@ $$6|((k+1)^3 - (k+1))$$
 
 <ins>Conclusion.</ins> By induction, $6 | (n^3 - n)$ for all $n \in \mathbb{N}$. ▉
 
+(c) $9 | (3^{4n} + 9)$
 
-(c) $9 | (3^4n + 9)$
+_**Proof.**_ We proceed by induction
+
+<ins>Base case.</ins> $n=1$
+
+$3^{4\cdot1}+9=3^4+9=81+9=90$
+
+Since $9|90$, so the base case holds.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume that $9|(3^{4k} +9)$.
+
+<ins>Induction Step.</ins>
+
+We must show that $9|(3^{4(k+1)} + 9)$
+
+$$
+\begin{aligned}
+3^{4(k+1)} + 9 &= 3^4 \cdot 3^{4k} + 9 \\
+&= 81 \cdot 3^{4k} + 9 \\
+&= 9(9 \cdot 3^{4k} + 1)
+\end{aligned}
+$$
+
+Since $9 \cdot 3^{4k} + 1 \in \mathbb{Z}$, it follows that $9|3^{4(k+1)} + 9$
+
+<ins>Conclusion.</ins> By induction, $9|3^{4n} + 9$ for all $n \in \mathbb{N}$. ▉  
 
 (d) $5 | (n^5 - n)$
 
