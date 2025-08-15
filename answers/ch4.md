@@ -180,7 +180,7 @@ Let $k \in \mathbb{N}$ and assume that $6 | (k^3 - k)$.
 
 We need to prove that the result holds for $k+1$, that is
 
-$$6 | ((k+1)^3 - (k+1)$$
+$$6 | ((k+1)^3 - (k+1))$$
 
 $$
 \begin{aligned}
@@ -189,7 +189,7 @@ $$
 &= k^3 +3k^2 +2k \\
 &= (k^3-k) + 3k^2+3k \\
 &= (k^3-k) + 3(k^2+k) \\
-&= (k^3-k) + 3 \cdot k(k+1))  && (1)
+&= (k^3-k) + 3 \cdot k(k+1)  && (1)
 \end{aligned}
 $$
 
