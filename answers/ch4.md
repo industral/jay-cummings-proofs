@@ -3,25 +3,25 @@
 ### Exercise 4.1
 Prove that the sum of the first $n$ odd natural numbers equals $n^2$ by induction or strong induction
 
-_**Proof.**_ We proceed by induction
+_**Proof.**_ We proceed by induction.
 
 <ins>Base case.</ins> $n=1$
 
-$1=1^2$ which is true
+$1=1^2$, which is true
 
 <ins>Inductive Hypothesis.</ins>
 
 Assume the statement holds for some $k \in \mathbb{N}$, that is
-$1+3+5+...+ (2k-1)=k^2$
+$1+3+5+ \ldots + (2k-1)=k^2$
 
 <ins>Induction Step.</ins>
 
 We aim to prove that the result holds for $k+1$, that is
-$1+3+5+...+ (2k-1) + (2(k+1) - 1)=(k+1)^2$
+$1+3+5+\ldots+ (2k-1) + (2(k+1) - 1)=(k+1)^2$
 
 Substitute our inductive hypothesis, so
 
-$k^2 + (2(k+1) - 1) =(k+1)^2$\
+$k^2 + \big(2(k+1) - 1\big) =(k+1)^2$\
 $k^2 + (2k + 2 - 1) =(k+1)^2$\
 $k^2 + 2k + 1 =(k+1)^2$
 
@@ -34,7 +34,7 @@ Provide three proofs that if $n \in \mathbb{N}$, then $n^2 - n$ is even.
 
 (a) Prove it by cases, by considering the $n$ is even and $n$ is odd cases
 
-_**Proof.**_ We proceed by direct proof by cases
+_**Proof.**_ We proceed by direct proof by cases.
 
 <ins>Case 1.</ins> $n$ is **even**
 
@@ -67,27 +67,27 @@ Since it's divisible by 2, it's **even**.
 
 Thus, $n^2 - n$ is even for all $n \in \mathbb{N}$. ▉
 
-(b) Prove it by applying Proposition 4.2 to the sum $1+2+3+...+(n-1)$
+(b) Prove it by applying Proposition 4.2 to the sum $1+2+3+\ldots+(n-1)$
 
 _**Proof.**_ Using Proposition 4.2
 
 By Proposition 4.2
 
-$$1+2+3+...+n= \frac{n(n+1)}{2}$$
+$$1+2+3+\ldots+n= \frac{n(n+1)}{2}$$
 
 but a hint in the example is to use 
-$$1+2+3+...+(n-1)$$ which means
-$$1+2+3+...+(n-1) = \frac{n(n-1)}{2}$$
+$$1+2+3+\ldots+(n-1)$$ which means
+$$1+2+3+\ldots+(n-1) = \frac{n(n-1)}{2}$$
 
 Multiplying both sides by $2$, we have 
 
-$$2(1+2+3+...+(n-1)) = n(n-1)$$
+$$2(1+2+3+\ldots+(n-1)) = n(n-1)$$
 
 And since $n^2-n = n(n-1)$, $n^2 - n$ is even. ▉
 
 (c) Prove it by induction
 
-_**Proof.**_ We proceed by induction
+_**Proof.**_ We proceed by induction.
 
 <ins>Base case.</ins> $n=1$
 
@@ -130,7 +130,7 @@ Use induction or strong induction to prove that the following hold for every $n 
 
 (a) $3 | (4^n - 1)$
 
-_**Proof.**_ We proceed by induction
+_**Proof.**_ We proceed by induction.
 
 <ins>Base case.</ins> $n=1$
 
@@ -166,7 +166,7 @@ hence, $3 | (4^{k+1} - 1)$.
 
 (b) $6 | (n^3 - n)$
 
-_**Proof.**_ We proceed by induction
+_**Proof.**_ We proceed by induction.
 
 <ins>Base case.</ins> $n=1$
 
@@ -208,7 +208,7 @@ $$6|((k+1)^3 - (k+1))$$
 
 (c) $9 | (3^{4n} + 9)$
 
-_**Proof.**_ We proceed by induction
+_**Proof.**_ We proceed by induction.
 
 <ins>Base case.</ins> $n=1$
 
@@ -238,7 +238,7 @@ Since $9 \cdot 3^{4k} + 1 \in \mathbb{Z}$, it follows that $9|3^{4(k+1)} + 9$
 
 (d) $5 | (n^5 - n)$
 
-_**Proof.**_ We proceed by induction
+_**Proof.**_ We proceed by induction.
 
 <ins>Base case.</ins> $n=1$
 
@@ -337,3 +337,48 @@ $$
 Since both $30m$ and $5$ are divisible by $5$, $6^{k+1} - 1$ is divisible by $5$.
 
 <ins>Conclusion.</ins> By induction, $5 | (6^n - 1)$ for all $n \in \mathbb{N}$. ▉
+
+### Exercise 4.4
+Prove that each of the following hold for every $n \in \mathbb{N}$.
+
+(a) $1^2 + 2^2 + 3^2 + \ldots + n^2 = \frac{n(n+1)(2n+1)}{6}$
+
+_**Proof.**_ We proceed by induction.
+
+<ins>Base case.</ins> $n=1$
+
+$$1^2 = \frac{1(1+1)(2 \cdot 1 + 1)}{6} = \frac{1(2)(2+1)}{6}=\frac {2 \cdot 3}{6} = 1$$
+
+which is true.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume that
+
+$$1^2 + 2^2 + 3^2 + \ldots + k^2 = \frac{k(k+1)(2k+1)}{6}$$
+
+<ins>Induction Step.</ins>
+
+We must prove that the result holds for $k+1$, that is
+
+$$1^2 + 2^2 + 3^2 + \ldots + k^2 + (k+1)^2 = \frac{(k+1)(k+2)(2(k+1)+1)}{6}$$
+
+Using the inductive hypothesis
+
+$$\frac{k(k+1)(2k+1)}{6} + (k+1)^2 = \frac{(k+1)(k+2)(2(k+1)+1)}{6}$$
+
+Multiply each side by $6$:
+
+$$k(k + 1)(2k+1) + 6\big((k+1)^2\big) = (k+1)(k+2)(2k+3)$$
+
+Now divide each side by $(k + 1)$:
+
+$$k(2k+1) + 6(k+1) = (k+2)(2k+3)$$
+
+$$2k^2+k+6k+6 = 2k^2+3k+4k+6$$
+
+$$2k^2+7k+6 = 2k^2+7k+6$$
+
+which is true. Hence the result holds for $k+1$.
+
+<ins>Conclusion.</ins> By induction, $1^2 + 2^2 + 3^2 + \ldots + n^2 = \frac{n(n+1)(2n+1)}{6}$ for all $n \in \mathbb{N}$. ▉
