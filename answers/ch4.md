@@ -139,9 +139,7 @@ and $3|3$. So statement holds for $n=1$.
 
 <ins>Inductive Hypothesis.</ins>
 
-Let $k \in \mathbb{N}$, and assume that
-
-$$3 | (4^k - 1)$$
+Let $k \in \mathbb{N}$ and assume that $3 | (4^k - 1)$
 
 <ins>Induction Step.</ins>
 
@@ -167,6 +165,47 @@ hence, $3 | (4^{k+1} - 1)$.
 <ins>Conclusion.</ins> Therefore, by induction, $3 | (4^n - 1)$ for all $n \in \mathbb{N}$. ▉
 
 (b) $6 | (n^3 - n)$
+
+_**Proof.**_ We proceed by induction
+
+<ins>Base case.</ins> $n=1$
+
+$1^3 - 1 = 0$, and $6|0$. Thus, the statement holds for $n=1$.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume that $6 | (k^3 - k)$.
+
+<ins>Induction Step.</ins>
+
+We need to prove that the result holds for $k+1$, that is
+
+$$6 | ((k+1)^3 - (k+1)$$
+
+$$
+\begin{aligned}
+(k+1)^3 - (k+1) &= k^3+3k^2+3k+1-(k+1) \\
+&= k^3+3k^2+3k+1-k-1 \\
+&= k^3 +3k^2 +2k \\
+&= (k^3-k) + 3k^2+3k \\
+&= (k^3-k) + 3(k^2+k) \\
+&= (k^3-k) + 3 \cdot k(k+1))  && (1)
+\end{aligned}
+$$
+
+By inductive hypothesis:
+- $k^3-k$ is divisible by $6$
+- $3$ divides $3$
+- $k(k+1)$ is a product of two consecutive numbers, hence it's even. Thus, $2$ divides $k(k+1)$
+
+Therefore, $3 \cdot k(k+1))$ is divisible by both $2$ and $3$, so it's divisible by $6$.
+
+Since both terms on the right-hand side of (1) are multiples of $6$, their sum is also a multiple of $6$. Hence,
+
+$$6|((k+1)^3 - (k+1))$$
+
+<ins>Conclusion.</ins> By induction, $6 | (n^3 - n)$ for all $n \in \mathbb{N}$. ▉
+
 
 (c) $9 | (3^4n + 9)$
 
