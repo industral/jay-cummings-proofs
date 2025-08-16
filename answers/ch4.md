@@ -492,7 +492,7 @@ $$
 \begin{aligned}
 k + 2 &< 4k^2\\
 k + 2 + 1 &< 4k^2 + 1 &&\text{(add $1$ to both sides)} \\
-k + 3 &< 4k^2 + 1 + 8k + 3 &&\text{(since $8k+3 > 0$, add $8k+3 > 0$ to the bigger side)} \\
+k + 3 &< 4k^2 + 1 + 8k + 3 &&\text{(since $8k+3 > 0$, add $8k+3$ to the bigger side)} \\
 k + 3 &< 4k^2 + 8k + 4
 \end{aligned}
 $$
