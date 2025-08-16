@@ -330,11 +330,11 @@ $$
 &= 6(6^k) - 6 + 5 \\
 &= 6(6^k - 1) + 5 && \text{(express in terms of $(6^k - 1)$ so we can use inductive hypothesis)} \\
 &= 6 \cdot 5m + 5 && \text{(by the inductive hypothesis)} \\
-&= 30m + 5 \\
+&= 5(6m + 1) \\
 \end{aligned}
 $$
 
-Since both $30m$ and $5$ are divisible by $5$, $6^{k+1} - 1$ is divisible by $5$.
+Since $6m+1 \in \mathbb{Z}$, we have $5|(6^{k+1} - 1)$.
 
 <ins>Conclusion.</ins> By induction, $5 | (6^n - 1)$ for all $n \in \mathbb{N}$. ▉
 
@@ -382,3 +382,42 @@ $$2k^2+7k+6 = 2k^2+7k+6$$
 which is true. Hence the result holds for $k+1$.
 
 <ins>Conclusion.</ins> By induction, $1^2 + 2^2 + 3^2 + \ldots + n^2 = \frac{n(n+1)(2n+1)}{6}$ for all $n \in \mathbb{N}$. ▉
+
+(b) $1^3 + 2^3 + 3^3 + \ldots + n^3 = \frac{n^2(n+1)^2}{4}$
+
+_**Proof.**_ We proceed by induction.
+
+<ins>Base case.</ins> $n=1$
+
+$$1^3 = \frac{1^2(1+1)^2}{4} = \frac{1 \cdot 2^2}{4}=\frac {4}{4} = 1$$
+
+which is true.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume that
+
+$$1^3 + 2^3 + 3^3 + \ldots + k^3 = \frac{k^2(k+1)^2}{4}$$
+
+<ins>Induction Step.</ins>
+
+We must prove that the result holds for $k+1$, that is
+
+$$1^3 + 2^3 + 3^3 + \ldots + k^3 + (k+1)^3 = \frac{(k+1)^2(k+2)^2}{4}$$
+
+Using the inductive hypothesis
+
+$$\frac{k^2(k+1)^2}{4} + (k+1)^3 = \frac{(k+1)^2(k+2)^2}{4}$$
+
+Multiply each side by $4$:
+
+$$k^2(k+1)^2 + 4 \big((k+1)^3\big) = (k+1)^2(k+2)^2$$
+
+Now divide each side by $(k + 1)^2$:
+
+$$k^2 + 4 (k+1) = (k+2)^2$$
+$$k^2 + 4k + 4 = k^2 + 4k + 4 $$
+
+which is true. Therefore, the formula holds for $k+1$.
+
+<ins>Conclusion.</ins> By induction, $1^3 + 2^3 + 3^3 + \ldots + n^3 = \frac{n^2(n+1)^2}{4}$ for all $n \in \mathbb{N}$. ▉
