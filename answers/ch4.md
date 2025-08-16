@@ -487,6 +487,7 @@ $$(k+1)+2 < 4(k+1)^2$$
 $$k+3 < 4k^2+8k+4$$
 
 Using inductive hypothesis,
+
 $$
 \begin{aligned}
 k + 2 &< 4k^2\\
