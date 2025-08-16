@@ -421,3 +421,41 @@ $$k^2 + 4k + 4 = k^2 + 4k + 4 $$
 which is true. Therefore, the formula holds for $k+1$.
 
 <ins>Conclusion.</ins> By induction, $1^3 + 2^3 + 3^3 + \ldots + n^3 = \frac{n^2(n+1)^2}{4}$ for all $n \in \mathbb{N}$. ▉
+
+(c) $1 \cdot 2 + 2\cdot3 + 3\cdot4 + \ldots + n(n + 1) = \frac{n(n+1)(n+2)}{3}$
+
+_**Proof.**_ We proceed by induction.
+
+<ins>Base case.</ins> $n=1$
+
+$$1 \cdot 2 = \frac{1(1+1)(1 + 2)}{3} = \frac{2 \cdot 3}{3}=\frac {6}{3} = 2$$
+
+which is true.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume that
+
+$$1\cdot2 + 2\cdot3 + 3\cdot4 + \ldots + k(k+1) = \frac{k(k+1)(k+2)}{3}$$
+
+<ins>Induction Step.</ins>
+
+We must prove that the result holds for $k+1$, that is
+
+$$1\cdot2 + 2\cdot3 + 3\cdot4 + \ldots + k \cdot (k+1) + (k+1)(k+2) = \frac{(k+1)(k+2)(k+3)}{3}$$
+
+Using the inductive hypothesis
+
+$$\frac{k(k+1)(k+2)}{3} + (k+1)(k+2) = \frac{(k+1)(k+2)(k+3)}{3}$$
+
+Multiply each side by $3$:
+
+$$k(k + 1)(k+2) + 3\big((k+1)(k+2)\big) = (k+1)(k+2)(k+3)$$
+
+Now divide each side by $(k + 1)(k+2)$:
+
+$$k + 3 = k+3$$
+
+which is true. Therefore, the formula holds for $k+1$.
+
+<ins>Conclusion.</ins> By induction, $1 \cdot 2 + 2\cdot3 + 3\cdot4 + \ldots + n(n + 1) = \frac{n(n+1)(n+2)}{3}$ for all $n \in \mathbb{N}$. ▉
