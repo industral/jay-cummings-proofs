@@ -459,3 +459,43 @@ $$k + 3 = k+3$$
 which is true. Therefore, the formula holds for $k+1$.
 
 <ins>Conclusion.</ins> By induction, $1 \cdot 2 + 2\cdot3 + 3\cdot4 + \ldots + n(n + 1) = \frac{n(n+1)(n+2)}{3}$ for all $n \in \mathbb{N}$. ▉
+
+### Exercise 4.5
+Prove that each of the following holds for every $n \in \mathbb{N}$. Also, before each proof, pick three specific $n$-values and verify that the result holds for those values.
+
+(a) $n+2 < 4n^2$
+
+_**Proof.**_ We proceed by induction
+
+<ins>Base case.</ins> $n=1$
+
+$$n=1: 1 + 2 < 4 \cdot 1^2 = 3 < 4$$
+$$n=2: 2 + 2 < 4 \cdot 2^2 = 4 < 16$$
+$$n=3: 3 + 2 < 4 \cdot 3^2 = 5 < 36$$
+
+which is true.
+
+<ins>Inductive Hypothesis.</ins>
+
+Let $k \in \mathbb{N}$ and assume that $k + 2 < 4k^2$
+
+<ins>Induction Step.</ins>
+
+We must prove that the result holds for $k+1$, that is
+
+$$(k+1)+2 < 4(k+1)^2$$
+$$k+3 < 4k^2+8k+4$$
+
+Using inductive hypothesis,
+$$
+\begin{aligned}
+k + 2 &< 4k^2\\
+k + 2 + 1 &< 4k^2 + 1 &&\text{(add $1$ to both sides)} \\
+k + 3 &< 4k^2 + 1 + 8k + 3 &&\text{(since $8k+3 > 0$, add $8k+3 > 0$ to the bigger side)} \\
+k + 3 &< 4k^2 + 8k + 4
+\end{aligned}
+$$
+
+which we had to prove for the induction step.
+
+<ins>Conclusion.</ins> It follows by induction that $n+2 < 4n^2$ for all $n \in \mathbb{N}$. ▉
